@@ -1,0 +1,51 @@
+
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix mod: <http://moddevices.com/ns/mod#>.
+
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons>
+    a lv2:Plugin ;
+    lv2:project <http://lv2plug.in/ns/lv2> ;
+    doap:name "Slider Buttons" ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:port 
+    [
+        a lv2:InputPort, lv2:ControlPort;
+        lv2:index 0;
+        lv2:symbol "DownButton";
+        lv2:name "Down Button";
+        lv2:portProperty lv2:integer, lv2:toggled, mod:preferMomentaryOnByDefault;
+        lv2:default 0;
+        lv2:minimum 0;
+        lv2:maximum 1;
+    ],
+    [
+        a lv2:InputPort, lv2:ControlPort;
+        lv2:index 1;
+        lv2:symbol "UpButton";
+        lv2:name "Up Button";
+        lv2:portProperty lv2:integer, lv2:toggled, mod:preferMomentaryOnByDefault;
+        lv2:default 0;
+        lv2:minimum 0;
+        lv2:maximum 1;
+    ],
+    [
+        a lv2:OutputPort, lv2:CVPort, mod:CVPort;
+        lv2:index 2;
+        lv2:symbol "CvOutput";
+        lv2:name "CV Output";
+    ],
+    [
+        a lv2:InputPort ,
+        lv2:ControlPort ;
+        lv2:index 3;
+        lv2:symbol "Speed" ;
+        lv2:name "Speed";
+        lv2:default 1.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 10.0 ;
+        units:unit mod:volts ;
+    ] .

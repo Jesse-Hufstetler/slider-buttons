@@ -1,0 +1,13 @@
+# ==== Bundles ====
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons>
+	a lv2:Plugin ;
+	lv2:binary <slider-buttons@LIB_EXT@>  ;
+	rdfs:seeAlso <slider-buttons.ttl> .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> a lv2:Plugin .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> lv2:binary <slider-buttons.so> .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> rdfs:seeAlso <slider-buttons.ttl> .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> a lv2:Plugin .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> lv2:binary <amp@LIB_EXT@> .
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons> rdfs:seeAlso <slider-buttons.ttl> .
