@@ -4,12 +4,32 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix mod: <http://moddevices.com/ns/mod#>.
 
 <https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons>
-    a lv2:Plugin ;
+    a lv2:Plugin, mod:ControlVoltagePlugin ;
     lv2:project <http://lv2plug.in/ns/lv2> ;
     doap:name "Slider Buttons" ;
+    doap:license <https://opensource.org/licenses/MIT> ;
+    doap:developer [
+        foaf:name "Jesse Hufstetler" ;
+        foaf:homepage <https://github.com/Jesse-Hufstetler> ;
+    ] ;
+    doap:maintainer [
+        foaf:name "Jesse Hufstetler" ;
+        foaf:homepage <https://github.com/Jesse-Hufstetler/slider-buttons> ;
+    ] ;
+    lv2:minorVersion 1 ;
+    lv2:microVersion 0 ;
+    rdfs:comment """
+Two momentary buttons that slide a control voltage up and down.
+
+Hold UP to raise the CV output and DOWN to lower it, at a rate set by SPEED
+(volts per second). Release both and the output holds its value. The output
+is clamped to 0-10 V and starts at 0 V. Handy for sweeping a filter, volume
+or pitch from footswitches without an expression pedal.
+""" ;
     lv2:optionalFeature lv2:hardRTCapable ;
     lv2:port 
     [

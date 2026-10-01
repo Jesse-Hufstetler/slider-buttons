@@ -1,0 +1,27 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-slider-buttons.html> ;
+        modgui:stylesheet <modgui/stylesheet-slider-buttons.css> ;
+        modgui:screenshot <modgui/screenshot-slider-buttons.png> ;
+        modgui:thumbnail <modgui/thumbnail-slider-buttons.png> ;
+        modgui:brand "Jesse" ;
+        modgui:label "Slider Buttons" ;
+        modgui:model "slider-buttons" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "DownButton" ;
+            lv2:name "Down Button" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "UpButton" ;
+            lv2:name "Up Button" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "Speed" ;
+            lv2:name "Speed" ;
+        ] ;
+    ] .

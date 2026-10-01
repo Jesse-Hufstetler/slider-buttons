@@ -1,0 +1,142 @@
+.mod-pedal.slider-buttons{{{cns}}} {
+    position: relative;
+    width: 200px;
+    height: 270px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #3b3f47 0%, #272a30 100%);
+    box-shadow: inset 0 0 0 2px #14161a, inset 0 2px 0 3px rgba(255, 255, 255, 0.07);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d8dbe0;
+    overflow: hidden;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .drag-handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 20;
+    cursor: move;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .title {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffc440;
+}
+
+/* UP / DOWN buttons. The switch widget toggles the .on / .off class on these. */
+.mod-pedal.slider-buttons{{{cns}}} .btn {
+    position: absolute;
+    top: 52px;
+    width: 76px;
+    height: 76px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 2px solid #14161a;
+    background: linear-gradient(180deg, #4a4f58 0%, #30343b 100%);
+    box-shadow: 0 3px 0 #101216, inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    cursor: pointer;
+    text-align: center;
+    z-index: 40;
+}
+.mod-pedal.slider-buttons{{{cns}}} .btn.up { left: 17px; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.down { right: 17px; }
+
+.mod-pedal.slider-buttons{{{cns}}} .btn span {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 100%;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #9aa0aa;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .btn .arrow {
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    margin-left: -13px;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+}
+.mod-pedal.slider-buttons{{{cns}}} .btn.up .arrow { border-bottom: 22px solid #9aa0aa; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.down .arrow { border-top: 22px solid #9aa0aa; }
+
+.mod-pedal.slider-buttons{{{cns}}} .btn.on {
+    background: linear-gradient(180deg, #ffd25e 0%, #f0a420 100%);
+    box-shadow: 0 1px 0 #101216, 0 0 14px rgba(255, 196, 64, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    transform: translateY(2px);
+}
+.mod-pedal.slider-buttons{{{cns}}} .btn.on span { color: #3a2a05; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.up.on .arrow { border-bottom-color: #3a2a05; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.down.on .arrow { border-top-color: #3a2a05; }
+
+/* Speed knob: a 64 frame filmstrip of 64x64 frames, driven by the film widget. */
+.mod-pedal.slider-buttons{{{cns}}} .knob {
+    position: absolute;
+    left: 68px;
+    top: 146px;
+    width: 64px;
+    height: 64px;
+    background-image: url(/resources/knob.png{{{ns}}});
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .knob-label {
+    position: absolute;
+    left: 0;
+    top: 214px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #9aa0aa;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .knob-value {
+    position: absolute;
+    left: 60px;
+    top: 228px;
+    width: 80px;
+    text-align: center;
+    font-size: 11px;
+    color: #ffc440;
+    z-index: 40;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .out-label {
+    position: absolute;
+    right: 46px;
+    bottom: 14px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #9aa0aa;
+}
+
+.mod-pedal.slider-buttons{{{cns}}} .jack {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #0b0c0e 0 30%, #8a919c 32% 52%, #2b2e34 54% 100%);
+    box-shadow: 0 0 0 2px #14161a;
+    z-index: 40;
+}

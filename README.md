@@ -37,6 +37,14 @@ sudo make install   # installs to /usr/local/lib/lv2
 ## Files
 
 - `slider-buttons.c`: the plugin code
-- `slider-buttons.lv2/`: the LV2 bundle (`slider-buttons.ttl` describes the ports; `manifest.ttl` is generated from `manifest.ttl.in`)
+- `slider-buttons.lv2/`: the LV2 bundle (`slider-buttons.ttl` describes the ports, `modgui.ttl` the GUI; `manifest.ttl` is generated from `manifest.ttl.in`)
 - `Makefile`, `Makefile.mk`: build rules
 - `redeploy.sh`: build and deploy to a MOD Dwarf
+
+## Pedal GUI
+
+`slider-buttons.lv2/modgui/` holds the plugin's MOD pedal GUI (HTML template, stylesheet, a 64 frame knob filmstrip, screenshot and thumbnail). The artwork is original to this project. To redraw the knob filmstrip, run `tools/gen-knob.ps1` from PowerShell on Windows.
+
+## License
+
+[MIT](LICENSE)
