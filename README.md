@@ -44,7 +44,7 @@ sudo make install   # installs to /usr/local/lib/lv2
 
 ## Pedal GUI
 
-`slider-buttons.lv2/modgui/` holds the plugin's MOD pedal GUI (HTML template, stylesheet, a 64 frame knob filmstrip, screenshot and thumbnail). The artwork is original to this project. To redraw the knob filmstrip, run `tools/gen-knob.ps1` from PowerShell on Windows.
+`slider-buttons.lv2/modgui/` holds the plugin's MOD pedal GUI (HTML template, stylesheet, a level-meter script, screenshot and thumbnail). The artwork is original to this project and drawn entirely in CSS.
 
 ## License
 

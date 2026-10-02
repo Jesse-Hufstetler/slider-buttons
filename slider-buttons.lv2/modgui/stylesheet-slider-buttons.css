@@ -3,10 +3,10 @@
     width: 200px;
     height: 290px;
     border-radius: 10px;
-    background: linear-gradient(180deg, #3b3f47 0%, #272a30 100%);
-    box-shadow: inset 0 0 0 2px #14161a, inset 0 2px 0 3px rgba(255, 255, 255, 0.07);
+    background: linear-gradient(180deg, #3d3d3d 0%, #282828 100%);
+    box-shadow: inset 0 0 0 2px #151515, inset 0 2px 0 3px rgba(255, 255, 255, 0.07);
     font-family: Arial, Helvetica, sans-serif;
-    color: #d8dbe0;
+    color: #dddddd;
 }
 
 .mod-pedal.slider-buttons{{{cns}}} .drag-handle {
@@ -28,7 +28,7 @@
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #ffc440;
+    color: #ff4d4d;
 }
 
 /* Output level meter, filled by script-slider-buttons.js from the Value port. */
@@ -40,15 +40,15 @@
     height: 12px;
     box-sizing: border-box;
     border-radius: 6px;
-    border: 2px solid #14161a;
-    background: #15171b;
+    border: 2px solid #151515;
+    background: #171717;
     overflow: hidden;
 }
 .mod-pedal.slider-buttons{{{cns}}} .meter-fill {
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #f0a420 0%, #ffd25e 100%);
-    box-shadow: 0 0 8px rgba(255, 196, 64, 0.6);
+    background: linear-gradient(90deg, #d42a2a 0%, #ff7f70 100%);
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
 }
 .mod-pedal.slider-buttons{{{cns}}} .out-value {
     position: absolute;
@@ -58,7 +58,7 @@
     text-align: center;
     font-size: 13px;
     font-weight: bold;
-    color: #ffc440;
+    color: #ff4d4d;
 }
 
 /* UP / DOWN buttons. The switch widget toggles the .on / .off class on these. */
@@ -69,9 +69,9 @@
     height: 76px;
     box-sizing: border-box;
     border-radius: 12px;
-    border: 2px solid #14161a;
-    background: linear-gradient(180deg, #4a4f58 0%, #30343b 100%);
-    box-shadow: 0 3px 0 #101216, inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    border: 2px solid #151515;
+    background: linear-gradient(180deg, #4b4b4b 0%, #303030 100%);
+    box-shadow: 0 3px 0 #101010, inset 0 1px 0 rgba(255, 255, 255, 0.14);
     cursor: pointer;
     text-align: center;
     z-index: 40;
@@ -87,7 +87,7 @@
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #9aa0aa;
+    color: #9c9c9c;
 }
 
 .mod-pedal.slider-buttons{{{cns}}} .btn .arrow {
@@ -100,29 +100,60 @@
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
 }
-.mod-pedal.slider-buttons{{{cns}}} .btn.up .arrow { border-bottom: 22px solid #9aa0aa; }
-.mod-pedal.slider-buttons{{{cns}}} .btn.down .arrow { border-top: 22px solid #9aa0aa; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.up .arrow { border-bottom: 22px solid #9c9c9c; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.down .arrow { border-top: 22px solid #9c9c9c; }
 
 .mod-pedal.slider-buttons{{{cns}}} .btn.on {
-    background: linear-gradient(180deg, #ffd25e 0%, #f0a420 100%);
-    box-shadow: 0 1px 0 #101216, 0 0 14px rgba(255, 196, 64, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180deg, #ff7f70 0%, #d42a2a 100%);
+    box-shadow: 0 1px 0 #101010, 0 0 14px rgba(255, 77, 77, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45);
     transform: translateY(2px);
 }
-.mod-pedal.slider-buttons{{{cns}}} .btn.on span { color: #3a2a05; }
-.mod-pedal.slider-buttons{{{cns}}} .btn.up.on .arrow { border-bottom-color: #3a2a05; }
-.mod-pedal.slider-buttons{{{cns}}} .btn.down.on .arrow { border-top-color: #3a2a05; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.on span { color: #fff3f1; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.up.on .arrow { border-bottom-color: #fff3f1; }
+.mod-pedal.slider-buttons{{{cns}}} .btn.down.on .arrow { border-top-color: #fff3f1; }
 
-/* Speed knob: a 64 frame filmstrip of 64x64 frames, driven by the film widget. */
+/* Speed knob. MOD rotates the .knob element itself (mod-widget-rotation), so it only holds the indicator;
+   the lit base underneath stays still. */
+.mod-pedal.slider-buttons{{{cns}}} .knob-base {
+    position: absolute;
+    left: 68px;
+    top: 172px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #626262 0%, #1e1e1e 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+    z-index: 38;
+}
+.mod-pedal.slider-buttons{{{cns}}} .knob-base::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #3e3e3e 0%, #242424 100%);
+}
 .mod-pedal.slider-buttons{{{cns}}} .knob {
     position: absolute;
     left: 68px;
     top: 172px;
     width: 64px;
     height: 64px;
-    background-image: url(/resources/knob.png{{{ns}}});
-    background-repeat: no-repeat;
     cursor: pointer;
     z-index: 40;
+}
+.mod-pedal.slider-buttons{{{cns}}} .knob::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    width: 5px;
+    height: 11px;
+    margin-left: -2.5px;
+    border-radius: 3px;
+    background: #ff4d4d;
 }
 
 .mod-pedal.slider-buttons{{{cns}}} .knob-label {
@@ -134,7 +165,7 @@
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #9aa0aa;
+    color: #9c9c9c;
 }
 
 .mod-pedal.slider-buttons{{{cns}}} .knob-value {
@@ -144,7 +175,7 @@
     width: 80px;
     text-align: center;
     font-size: 11px;
-    color: #ffc440;
+    color: #ff4d4d;
     z-index: 40;
 }
 
@@ -156,7 +187,7 @@
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #9aa0aa;
+    color: #9c9c9c;
 }
 
 /* MOD paints its own connector artwork on the port element; this only places its container on the right edge. */
