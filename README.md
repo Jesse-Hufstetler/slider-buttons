@@ -14,8 +14,9 @@ Hold **Up** and the output ramps up; hold **Down** and it ramps down. Release bo
 | Up Button | Control in (toggle, momentary) | 0–1 | While on, the output ramps up |
 | Speed | Control in | 0–10 (default 1) | Ramp rate in volts per second |
 | CV Output | CV out | 0–10 V | The current value |
+| Output Value | Control out | 0–10 V | The same level as a control value, so the GUI can show a live meter |
 
-The output is clamped to 0–10 V and starts at 0 V. If both buttons are held, they cancel out.
+The output is clamped to 0–10 V and starts at 0 V. If both buttons are held, they cancel out. The pedal GUI shows the level as a bar and a number.
 
 ## Building and installing
 

@@ -68,4 +68,15 @@ or pitch from footswitches without an expression pedal.
         lv2:minimum 0.0 ;
         lv2:maximum 10.0 ;
         units:unit mod:volts ;
+    ],
+    [
+        a lv2:OutputPort ,
+        lv2:ControlPort ;
+        lv2:index 4;
+        lv2:symbol "Value" ;
+        lv2:name "Output Value";
+        lv2:default 0.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 10.0 ;
+        units:unit mod:volts ;
     ] .

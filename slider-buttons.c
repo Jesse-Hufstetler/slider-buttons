@@ -7,13 +7,15 @@ typedef enum {
 	DOWN_BUTTON,
 	UP_BUTTON,
 	CV_OUTPUT,
-	SPEED
+	SPEED,
+	VALUE_OUT
 } PortIndex;
 typedef struct {
     float* down_button;
     float* up_button;
     float* cv_output;
     float* speed;
+    float* value_out;
 	double srate;
 	float current_value;
 } StateData;
@@ -21,6 +23,7 @@ static LV2_Handle instantiate(const LV2_Descriptor* descriptor, double rate, con
 	StateData* stateData = (StateData*)malloc(sizeof(StateData));
     stateData->srate = rate;
     stateData->current_value = 0;
+    stateData->value_out = NULL;
 	return (LV2_Handle)stateData;
 }
 static void connect_port(LV2_Handle instance, uint32_t port, void* data) {
@@ -30,6 +33,7 @@ static void connect_port(LV2_Handle instance, uint32_t port, void* data) {
 	case UP_BUTTON: stateData->up_button = (float*)data; break;
 	case CV_OUTPUT: stateData->cv_output = (float*)data; break;
 	case SPEED: stateData->speed = (float*)data; break;
+	case VALUE_OUT: stateData->value_out = (float*)data; break;
 	}
 }
 static void activate(LV2_Handle instance) { }
@@ -49,6 +53,8 @@ static void run(LV2_Handle instance, uint32_t n_samples) {
 		if (stateData->current_value > 10) stateData->current_value = 10;
 		cv_output[pos] = stateData->current_value;
 	}
+	// Report the level on a control port so the GUI can show it (a GUI cannot read a CV port).
+	if (stateData->value_out) *(stateData->value_out) = stateData->current_value;
 }
 static void deactivate(LV2_Handle instance){}
 static void cleanup(LV2_Handle instance) {
