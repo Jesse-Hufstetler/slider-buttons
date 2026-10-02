@@ -2,6 +2,8 @@
 
 [![build](https://github.com/Jesse-Hufstetler/slider-buttons/actions/workflows/build.yml/badge.svg)](https://github.com/Jesse-Hufstetler/slider-buttons/actions/workflows/build.yml)
 
+![Slider Buttons pedal](slider-buttons.lv2/modgui/screenshot-slider-buttons.png)
+
 An LV2 plugin for [MOD Devices](https://mod.audio/) hardware (built and tested against the MOD Dwarf) that turns two momentary buttons into a control voltage (CV) signal.
 
 Hold **Up** and the output ramps up; hold **Down** and it ramps down. Release both and it holds its value. It's a "hold to raise or lower" voltage source, handy for sweeping a filter, volume or pitch from footswitches instead of a knob or expression pedal.
