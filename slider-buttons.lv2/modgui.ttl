@@ -1,7 +1,7 @@
 @prefix modgui: <http://moddevices.com/ns/modgui#> .
 @prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
 
-<https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons>
+<https://jesse-hufstetler.github.io/plugins/slider-buttons>
     modgui:gui [
         modgui:resourcesDirectory <modgui> ;
         modgui:iconTemplate <modgui/icon-slider-buttons.html> ;

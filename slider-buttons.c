@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include "lv2/lv2plug.in/ns/lv2core/lv2.h"
-#define PLUGIN_URI "https://jesse-hufstetler.github.io/plugins/mod-devel/eg-slider-buttons"
+#define PLUGIN_URI "https://jesse-hufstetler.github.io/plugins/slider-buttons"
 
 typedef enum {
 	DOWN_BUTTON,
