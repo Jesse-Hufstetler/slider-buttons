@@ -21,7 +21,7 @@
         foaf:homepage <https://github.com/Jesse-Hufstetler/slider-buttons> ;
     ] ;
     lv2:minorVersion 1 ;
-    lv2:microVersion 1 ;
+    lv2:microVersion 2 ;
     rdfs:comment """
 Two momentary buttons that slide a control voltage up and down.
 
